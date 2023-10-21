@@ -1,6 +1,7 @@
 #se añaden las carpetas js que contienen los archivos de bootstrap.
 js/bootstrap.bundle.min.js
 css/bootstrap.min.css
+img/ #se añadio la carpeta de imagenes.
 
 #se añaden archivos a ignorar.
 
