@@ -1,9 +1,57 @@
-body {
+.header {
     background: url(/img/bg.jpg) rgba(0,0,0,0.3);
-    background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+}
+/* Traer el boton hacia delante de la imagen de corte */
+.boton {
+    position: absolute;
+    z-index: 100;
+}
+
+
+
+.vh-50 {
+    height: 50vmin;
+}
+
+/* SECTION DE CONTENIDO */
+
+.card-img-filter {
+    filter: brightness(0.5);
+}
+
+.card {
+    transition-duration: 0.6s;
+    clip-path: polygon(
+        50% 0,
+        100% 0,
+        100% 50%,
+        100% 100%,
+        50% 100%,
+        0 100%,
+        0 50%,
+        0 0
+    );
+}
+
+.card-effect:hover .card {
+    clip-path: polygon(
+        50% 0,
+        50% 0,
+        100% 50%,
+        100% 50%,
+        50% 100%,
+        50% 100%,
+        0 50%,
+        0 50%
+    );
+}
+.card-img-overlay {
+    transition-duration: 0.6s;
+}
+.card-effect:hover .card-img-overlay {
+    transform: scale(0.9);
 }
 
 @media (max-width: 991px) {
@@ -11,5 +59,4 @@ body {
         background-color: rgba(255,255,255,0.15);
         backdrop-filter: blur(10px);
     }
-    
 }
